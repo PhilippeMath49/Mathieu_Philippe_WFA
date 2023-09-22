@@ -89,8 +89,8 @@ namespace WFA
 
                     }
 
-                    
-                    
+
+
 
                 }
 
@@ -116,7 +116,7 @@ namespace WFA
                 }
             }
 
-            
+
 
 
 
@@ -142,10 +142,23 @@ namespace WFA
                 enemyTwoSpeed = -enemyTwoSpeed;
             }
 
+            horizontalPlatform.Left -= horizontalSpeed;
 
+            if (horizontalPlatform.Left < 0 || horizontalPlatform.Left + horizontalPlatform.Width > this.ClientSize.Width)
+            {
+                horizontalSpeed = -horizontalSpeed;
+            }
 
+            verticalPlatform.Top += verticalSpeed;
 
+            if (verticalPlatform.Top < 195 || verticalPlatform.Top > 581)
+            {
+                verticalSpeed = -verticalSpeed;
+
+            }
         }
+        
+
 
         private void KeyIsDown(object sender, KeyEventArgs e)
         {
