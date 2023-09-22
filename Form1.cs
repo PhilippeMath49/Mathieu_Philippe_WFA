@@ -93,17 +93,29 @@ namespace WFA
                     
 
                 }
+
+                if ((string)x.Tag == "coin")
+                {
+                    if (player.Bounds.IntersectsWith(x.Bounds) && x.Visible == true)
+                    {
+                        x.Visible = false;
+                        score++;
+                    }
+                }
+
+                win();
             }
 
-
             
+
+
 
 
             if (player.Top + player.Height > this.ClientSize.Height + 50)
             {
                 gameTimer.Stop();
                 isGameOver = true;
-                txtScore.Text = "Score: " + score + Environment.NewLine + "You fell to your death!";
+                txtScore.Text = "Score: " + score + Environment.NewLine + "tu es tombé";
             }
 
             
@@ -184,6 +196,20 @@ namespace WFA
             gameTimer.Start();
 
 
+        }
+
+        private void win()
+        {
+            if (player.Bounds.IntersectsWith(door.Bounds) && score == 26)
+            {
+                gameTimer.Stop();
+                isGameOver = true;
+                txtScore.Text = "Score: " + score + Environment.NewLine + "Your quest is complete!";
+            }
+            else
+            {
+                txtScore.Text = "Score: " + score + Environment.NewLine + "Collect all the coins";
+            }
         }
     }
 }
