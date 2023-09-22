@@ -104,6 +104,16 @@ namespace WFA
                 }
 
                 win();
+
+
+                if ((string)x.Tag == "enemy")
+                {
+                    if (player.Bounds.IntersectsWith(x.Bounds))
+                    {
+                        gameTimer.Stop();
+                        isGameOver = true;
+                    }
+                }
             }
 
             
@@ -118,7 +128,21 @@ namespace WFA
                 txtScore.Text = "Score: " + score + Environment.NewLine + "tu es tombé";
             }
 
-            
+            enemyOne.Left -= enemyOneSpeed;
+
+            if (enemyOne.Left < pictureBox5.Left || enemyOne.Left + enemyOne.Width > pictureBox5.Left + pictureBox5.Width)
+            {
+                enemyOneSpeed = -enemyOneSpeed;
+            }
+
+            enemyTwo.Left += enemyTwoSpeed;
+
+            if (enemyTwo.Left < pictureBox2.Left || enemyTwo.Left + enemyTwo.Width > pictureBox2.Left + pictureBox2.Width)
+            {
+                enemyTwoSpeed = -enemyTwoSpeed;
+            }
+
+
 
 
         }
