@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,7 @@ namespace WFA
     public partial class Form1 : Form
     {
 
-        bool goLeft, goRight, jumping, isGameOver;
+        bool goLeft, goRight, jumping, isGameOver, canJump;
 
         int jumpSpeed;
         int force;
@@ -71,12 +72,24 @@ namespace WFA
 
                     if ((string)x.Tag == "platform")
                     {
+
                         if (player.Bounds.IntersectsWith(x.Bounds))
                         {
-                            force = 8;
-                            player.Top = x.Top - player.Height;
+
+                            if (player.Top > x.Top - player.Height)
+                            {
+                                if (!canJump)
+                                {
+                                    force = 0;
+                                }
+                                canJump = true;
+                                force = 8;
+                                player.Top = x.Location.Y - player.Height;
 
 
+                             }
+
+                            //permet au joueur de bouger avec la plateforme  
                             if ((string)x.Name == "horizontalPlatform" && goLeft == false || (string)x.Name == "horizontalPlatform" && goRight == false)
                             {
                                 player.Left -= horizontalSpeed;
@@ -157,8 +170,8 @@ namespace WFA
 
             }
         }
-        
 
+        
 
         private void KeyIsDown(object sender, KeyEventArgs e)
         {
@@ -170,11 +183,13 @@ namespace WFA
             {
                 goRight = true;
             }
-            if (e.KeyCode == Keys.Space && jumping == false)
+            if (e.KeyCode == Keys.Space && jumping == false && canJump == true)
             {
                 jumping = true;
             }
         }
+
+        
 
         private void KeyIsUp(object sender, KeyEventArgs e)
         {
