@@ -5,6 +5,7 @@ using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -26,12 +27,14 @@ namespace WFA
 
         int enemyOneSpeed = 5;
         int enemyTwoSpeed = 3;
-
+        SoundPlayer simpleSound;
 
 
         public Form1()
         {
             InitializeComponent();
+            simpleSound = new SoundPlayer(Properties.Resources.YR);
+            simpleSound.PlayLooping();
         }
 
         private void MainGameTimerEvent(object sender, EventArgs e)
@@ -43,10 +46,12 @@ namespace WFA
             if (goLeft == true)
             {
                 player.Left -= playerSpeed;
+                player.Image=Properties.Resources.ghostPlayerLeft;
             }
             if (goRight == true)
             {
                 player.Left += playerSpeed;
+                player.Image = Properties.Resources.ghostPlayerRight;
             }
 
             if (jumping == true && force < 0)
@@ -80,7 +85,7 @@ namespace WFA
                             {
                                 Debug.WriteLine(jumping);
                                 force = 8;
-                                player.Top = x.Location.Y - player.Height+1;
+                                player.Top = x.Location.Y - player.Height+3;
                                 if (!jumping)
                                 {
                                     jumpSpeed = 0;
@@ -117,7 +122,7 @@ namespace WFA
                 }
 
                 win();
-
+                
 
                 if ((string)x.Tag == "enemy")
                 {
@@ -146,6 +151,14 @@ namespace WFA
             if (enemyOne.Left < pictureBox5.Left || enemyOne.Left + enemyOne.Width > pictureBox5.Left + pictureBox5.Width)
             {
                 enemyOneSpeed = -enemyOneSpeed;
+                if(enemyOneSpeed  < 0)
+                {
+                    enemyOne.Image = Properties.Resources.ghostRight;
+                }
+                else
+                {
+                    enemyOne.Image = Properties.Resources.ghostLeft;
+                }
             }
 
             enemyTwo.Left += enemyTwoSpeed;
@@ -153,6 +166,14 @@ namespace WFA
             if (enemyTwo.Left < pictureBox2.Left || enemyTwo.Left + enemyTwo.Width > pictureBox2.Left + pictureBox2.Width)
             {
                 enemyTwoSpeed = -enemyTwoSpeed;
+                if (enemyTwoSpeed < 0)
+                {
+                    enemyTwo.Image = Properties.Resources.ghostLeft;
+                }
+                else
+                {
+                    enemyTwo.Image = Properties.Resources.ghostRight;
+                }
             }
 
             horizontalPlatform.Left -= horizontalSpeed;
@@ -189,7 +210,10 @@ namespace WFA
             }
         }
 
-        
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
 
         private void KeyIsUp(object sender, KeyEventArgs e)
         {
@@ -260,8 +284,9 @@ namespace WFA
             }
             else
             {
-                txtScore.Text = "Score: " + score + Environment.NewLine + "Collect all the coins";
+                txtScore.Text = "Score: " + score + Environment.NewLine + "récupère toute ton âme";
             }
         }
+        
     }
 }

@@ -233,7 +233,7 @@
             // player
             // 
             this.player.BackColor = System.Drawing.Color.Transparent;
-            this.player.Image = ((System.Drawing.Image)(resources.GetObject("player.Image")));
+            this.player.Image = global::WFA.Properties.Resources.ghostPlayerRight;
             this.player.Location = new System.Drawing.Point(72, 656);
             this.player.Name = "player";
             this.player.Size = new System.Drawing.Size(30, 40);
@@ -244,7 +244,7 @@
             // enemyOne
             // 
             this.enemyOne.BackColor = System.Drawing.Color.Transparent;
-            this.enemyOne.Image = ((System.Drawing.Image)(resources.GetObject("enemyOne.Image")));
+            this.enemyOne.Image = global::WFA.Properties.Resources.ghostLeft;
             this.enemyOne.Location = new System.Drawing.Point(472, 357);
             this.enemyOne.Name = "enemyOne";
             this.enemyOne.Size = new System.Drawing.Size(30, 40);
@@ -255,7 +255,7 @@
             // enemyTwo
             // 
             this.enemyTwo.BackColor = System.Drawing.Color.Transparent;
-            this.enemyTwo.Image = ((System.Drawing.Image)(resources.GetObject("enemyTwo.Image")));
+            this.enemyTwo.Image = global::WFA.Properties.Resources.ghostRight;
             this.enemyTwo.Location = new System.Drawing.Point(360, 616);
             this.enemyTwo.Name = "enemyTwo";
             this.enemyTwo.Size = new System.Drawing.Size(30, 40);
@@ -641,6 +641,7 @@
             this.DoubleBuffered = true;
             this.Name = "Form1";
             this.Text = "niveau 1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyIsDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.KeyIsUp);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
