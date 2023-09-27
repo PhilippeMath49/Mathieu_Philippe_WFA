@@ -18,14 +18,12 @@ namespace WFA
         {
             InitializeComponent();
         }
-
+        //lance le jeu quand on clique sur le bouton
         private void buttonOneOnClick(object sender, EventArgs e)
         {
-            if (gameFormIsLoad != true) {
-                Form1 gameForm = new Form1();
-                gameForm.Show();
-            }
-            
+            //initialise un nouveau niveau avant de le faire apparaitre et cacher le menu
+            Form1 gameForm = new Form1();
+            gameForm.Show();
             this.Hide();
         }
     }
