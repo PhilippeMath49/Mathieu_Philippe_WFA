@@ -14,7 +14,7 @@ namespace WFA
     public partial class Form1 : Form
     {
 
-        bool goLeft, goRight, jumping, isGameOver, canJump;
+        bool goLeft, goRight, jumping, isGameOver;
 
         int jumpSpeed;
         int force;
@@ -78,13 +78,13 @@ namespace WFA
 
                             if (player.Top > x.Top - player.Height)
                             {
-                                if (!canJump)
-                                {
-                                    force = 0;
-                                }
-                                canJump = true;
+                                Debug.WriteLine(jumping);
                                 force = 8;
-                                player.Top = x.Location.Y - player.Height;
+                                player.Top = x.Location.Y - player.Height+1;
+                                if (!jumping)
+                                {
+                                    jumpSpeed = 0;
+                                }
 
 
                              }
@@ -183,7 +183,7 @@ namespace WFA
             {
                 goRight = true;
             }
-            if (e.KeyCode == Keys.Space && jumping == false && canJump == true)
+            if (e.KeyCode == Keys.Space && jumping == false )
             {
                 jumping = true;
             }

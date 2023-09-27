@@ -41,7 +41,6 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.verticalPlatform = new System.Windows.Forms.PictureBox();
             this.player = new System.Windows.Forms.PictureBox();
-            this.door = new System.Windows.Forms.PictureBox();
             this.enemyOne = new System.Windows.Forms.PictureBox();
             this.enemyTwo = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
@@ -71,6 +70,7 @@
             this.pictureBox36 = new System.Windows.Forms.PictureBox();
             this.pictureBox38 = new System.Windows.Forms.PictureBox();
             this.pictureBox39 = new System.Windows.Forms.PictureBox();
+            this.door = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -81,7 +81,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.verticalPlatform)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.door)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemyOne)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemyTwo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -110,14 +109,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox38)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox39)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.door)).BeginInit();
             this.SuspendLayout();
             // 
             // txtScore
             // 
+            this.txtScore.BackColor = System.Drawing.Color.Transparent;
             this.txtScore.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtScore.Location = new System.Drawing.Point(500, 9);
+            this.txtScore.Location = new System.Drawing.Point(403, 9);
             this.txtScore.Name = "txtScore";
-            this.txtScore.Size = new System.Drawing.Size(142, 61);
+            this.txtScore.Size = new System.Drawing.Size(235, 61);
             this.txtScore.TabIndex = 0;
             this.txtScore.Text = "Score: 0";
             this.txtScore.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -239,15 +240,6 @@
             this.player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.player.TabIndex = 2;
             this.player.TabStop = false;
-            // 
-            // door
-            // 
-            this.door.BackColor = System.Drawing.Color.DarkGreen;
-            this.door.Location = new System.Drawing.Point(2, 12);
-            this.door.Name = "door";
-            this.door.Size = new System.Drawing.Size(42, 58);
-            this.door.TabIndex = 2;
-            this.door.TabStop = false;
             // 
             // enemyOne
             // 
@@ -589,6 +581,16 @@
             this.pictureBox39.TabStop = false;
             this.pictureBox39.Tag = "coin";
             // 
+            // door
+            // 
+            this.door.BackColor = System.Drawing.Color.Transparent;
+            this.door.Image = ((System.Drawing.Image)(resources.GetObject("door.Image")));
+            this.door.Location = new System.Drawing.Point(47, 5);
+            this.door.Name = "door";
+            this.door.Size = new System.Drawing.Size(41, 65);
+            this.door.TabIndex = 29;
+            this.door.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -596,6 +598,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(654, 761);
+            this.Controls.Add(this.door);
             this.Controls.Add(this.enemyTwo);
             this.Controls.Add(this.pictureBox27);
             this.Controls.Add(this.pictureBox34);
@@ -624,7 +627,6 @@
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox12);
             this.Controls.Add(this.pictureBox11);
-            this.Controls.Add(this.door);
             this.Controls.Add(this.player);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.horizontalPlatform);
@@ -651,7 +653,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.verticalPlatform)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.door)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemyOne)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemyTwo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
@@ -680,6 +681,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox38)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox39)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.door)).EndInit();
             this.ResumeLayout(false);
 
     }
@@ -697,7 +699,6 @@
     private System.Windows.Forms.PictureBox pictureBox8;
     private System.Windows.Forms.PictureBox verticalPlatform;
     private System.Windows.Forms.PictureBox player;
-    private System.Windows.Forms.PictureBox door;
     private System.Windows.Forms.PictureBox enemyOne;
     private System.Windows.Forms.PictureBox enemyTwo;
     private System.Windows.Forms.PictureBox pictureBox11;
@@ -727,5 +728,6 @@
         private System.Windows.Forms.PictureBox pictureBox36;
         private System.Windows.Forms.PictureBox pictureBox38;
         private System.Windows.Forms.PictureBox pictureBox39;
+        private System.Windows.Forms.PictureBox door;
     }
 }
