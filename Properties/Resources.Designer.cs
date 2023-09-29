@@ -63,6 +63,16 @@ namespace WFA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap clé {
+            get {
+                object obj = ResourceManager.GetObject("clé", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ghostLeft {
             get {
                 object obj = ResourceManager.GetObject("ghostLeft", resourceCulture);
@@ -96,6 +106,36 @@ namespace WFA.Properties {
         internal static System.Drawing.Bitmap ghostRight {
             get {
                 object obj = ResourceManager.GetObject("ghostRight", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nuage5 {
+            get {
+                object obj = ResourceManager.GetObject("nuage5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap petit_nuage {
+            get {
+                object obj = ResourceManager.GetObject("petit_nuage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spike {
+            get {
+                object obj = ResourceManager.GetObject("spike", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

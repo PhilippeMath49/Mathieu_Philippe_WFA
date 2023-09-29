@@ -126,7 +126,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::WFA.Properties.Resources.nuage5;
             this.pictureBox1.Location = new System.Drawing.Point(-7, 736);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(325, 30);
@@ -138,7 +138,7 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Image = global::WFA.Properties.Resources.nuage5;
             this.pictureBox2.Location = new System.Drawing.Point(317, 656);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(231, 30);
@@ -150,7 +150,7 @@
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Image = global::WFA.Properties.Resources.nuage5;
             this.pictureBox3.Location = new System.Drawing.Point(181, 581);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(115, 30);
@@ -162,7 +162,7 @@
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Image = global::WFA.Properties.Resources.petit_nuage;
             this.pictureBox4.Location = new System.Drawing.Point(47, 501);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(115, 30);
@@ -174,7 +174,7 @@
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Image = global::WFA.Properties.Resources.nuage5;
             this.pictureBox5.Location = new System.Drawing.Point(218, 397);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(310, 30);
@@ -186,7 +186,7 @@
             // pictureBox6
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Image = global::WFA.Properties.Resources.nuage5;
             this.pictureBox6.Location = new System.Drawing.Point(35, 300);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(127, 30);
@@ -198,7 +198,7 @@
             // horizontalPlatform
             // 
             this.horizontalPlatform.BackColor = System.Drawing.Color.Transparent;
-            this.horizontalPlatform.Image = ((System.Drawing.Image)(resources.GetObject("horizontalPlatform.Image")));
+            this.horizontalPlatform.Image = global::WFA.Properties.Resources.nuage5;
             this.horizontalPlatform.Location = new System.Drawing.Point(259, 129);
             this.horizontalPlatform.Name = "horizontalPlatform";
             this.horizontalPlatform.Size = new System.Drawing.Size(199, 30);
@@ -210,7 +210,7 @@
             // pictureBox8
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Image = global::WFA.Properties.Resources.petit_nuage;
             this.pictureBox8.Location = new System.Drawing.Point(-7, 67);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(169, 30);
@@ -222,7 +222,7 @@
             // verticalPlatform
             // 
             this.verticalPlatform.BackColor = System.Drawing.Color.Transparent;
-            this.verticalPlatform.Image = ((System.Drawing.Image)(resources.GetObject("verticalPlatform.Image")));
+            this.verticalPlatform.Image = global::WFA.Properties.Resources.petit_nuage;
             this.verticalPlatform.Location = new System.Drawing.Point(558, 581);
             this.verticalPlatform.Name = "verticalPlatform";
             this.verticalPlatform.Size = new System.Drawing.Size(84, 30);

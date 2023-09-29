@@ -113,5 +113,17 @@
   <ItemGroup>
     <None Include="assets\ghostLeft.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\nuage5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\petit_nuage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\spike.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\clé.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
