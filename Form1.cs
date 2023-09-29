@@ -98,6 +98,7 @@ namespace WFA
                                     Debug.WriteLine(x.Location.Y);
                                     Debug.WriteLine("p" + player.Location.Y);
                                 }
+                            //si le joueur entre en collision par le bas de la plateforme sa position est replacée sous la plateforme
                             }else if(player.Top > x.Top)
                             {
                                 player.Top = x.Location.Y + player.Height + 1;
@@ -143,12 +144,20 @@ namespace WFA
                 }
 
                 //si le joueur rentre en collision avec un monstre le jeu s'arrête 
-                if ((string)x.Tag == "enemy")
+                if ((string)x.Tag == "enemy" && x.Visible == true)
                 {
                     if (player.Bounds.IntersectsWith(x.Bounds))
                     {
-                        gameTimer.Stop();
-                        isGameOver = true;
+                        if (player.Bottom < x.Top +5)
+                        {
+                            x.Hide();
+                        }
+                        else
+                        {
+                            gameTimer.Stop();
+                            isGameOver = true;
+                        }
+                        
                     }
                 }
             }
