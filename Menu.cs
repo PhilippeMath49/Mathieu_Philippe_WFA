@@ -26,5 +26,10 @@ namespace WFA
             gameForm.Show();
             this.Hide();
         }
+        //quitte le jeu sur le clic du bouton
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -245,9 +245,9 @@
             // 
             this.enemyOne.BackColor = System.Drawing.Color.Transparent;
             this.enemyOne.Image = global::WFA.Properties.Resources.ghostLeft;
-            this.enemyOne.Location = new System.Drawing.Point(472, 357);
+            this.enemyOne.Location = new System.Drawing.Point(476, 366);
             this.enemyOne.Name = "enemyOne";
-            this.enemyOne.Size = new System.Drawing.Size(30, 40);
+            this.enemyOne.Size = new System.Drawing.Size(30, 29);
             this.enemyOne.TabIndex = 3;
             this.enemyOne.TabStop = false;
             this.enemyOne.Tag = "enemy";
@@ -256,9 +256,9 @@
             // 
             this.enemyTwo.BackColor = System.Drawing.Color.Transparent;
             this.enemyTwo.Image = global::WFA.Properties.Resources.ghostRight;
-            this.enemyTwo.Location = new System.Drawing.Point(360, 616);
+            this.enemyTwo.Location = new System.Drawing.Point(361, 623);
             this.enemyTwo.Name = "enemyTwo";
-            this.enemyTwo.Size = new System.Drawing.Size(30, 40);
+            this.enemyTwo.Size = new System.Drawing.Size(30, 32);
             this.enemyTwo.TabIndex = 4;
             this.enemyTwo.TabStop = false;
             this.enemyTwo.Tag = "enemy";

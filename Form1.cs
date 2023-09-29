@@ -71,11 +71,14 @@ namespace WFA
             {
                 jumpSpeed = 10;
             }
+
+            
             //gestion des collisions 
             foreach (Control x in this.Controls)
             {
                 if (x is PictureBox)
                 {
+                   
 
                     // collision joueur/plateformes
                     if ((string)x.Tag == "platform")
@@ -84,17 +87,21 @@ namespace WFA
                         if (player.Bounds.IntersectsWith(x.Bounds))
                         {
                             // Vérifie si le joueur se trouve au-dessus de la plateforme
-                            if (player.Top > x.Top - player.Height)
+                            if ( player.Top < x.Top  )
                             {
-                                //réinitialise la force est fixe la position du joueur au dessus de la plateforme
+                                // Ajustez la position du joueur uniquement lorsque le joueur est en train de descendre.
                                 force = 8;
-                                player.Top = x.Location.Y - player.Height+1;
-                                //empêche le joueur de rentrer a nouveau en collision avec la plateforme tant qu'il n'a pas sauté
+                                player.Top = x.Location.Y - player.Height + 1;
                                 if (!jumping)
                                 {
                                     jumpSpeed = 0;
+                                    Debug.WriteLine(x.Location.Y);
+                                    Debug.WriteLine("p" + player.Location.Y);
                                 }
-                             }
+                            }else if(player.Top > x.Top)
+                            {
+                                player.Top = x.Location.Y + player.Height + 1;
+                            }
 
                             //permet au joueur de bouger avec la plateforme  en lui attribuant la même vitesse que cette dernière
                             if ((string)x.Name == "horizontalPlatform" && goLeft == false || (string)x.Name == "horizontalPlatform" && goRight == false)
