@@ -63,9 +63,29 @@ namespace WFA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap background2 {
+            get {
+                object obj = ResourceManager.GetObject("background2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap clé {
             get {
                 object obj = ResourceManager.GetObject("clé", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap door {
+            get {
+                object obj = ResourceManager.GetObject("door", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -126,6 +146,16 @@ namespace WFA.Properties {
         internal static System.Drawing.Bitmap petit_nuage {
             get {
                 object obj = ResourceManager.GetObject("petit_nuage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sans_titre {
+            get {
+                object obj = ResourceManager.GetObject("Sans_titre", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

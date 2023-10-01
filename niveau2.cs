@@ -122,6 +122,7 @@ namespace WFA
 
 
                 }
+                //si le joueur touche les spikes il meurt 
                 if((string)x.Tag == "spike")
                 {
                     if (player.Bounds.IntersectsWith(x.Bounds))

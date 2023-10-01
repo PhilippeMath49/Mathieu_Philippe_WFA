@@ -17,7 +17,7 @@ namespace WFA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new niveau2());
+            Application.Run(new Menu());
         }
     }
 }

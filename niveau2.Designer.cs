@@ -168,10 +168,12 @@
             // 
             // door
             // 
-            this.door.BackColor = System.Drawing.Color.Black;
-            this.door.Location = new System.Drawing.Point(57, 0);
+            this.door.BackColor = System.Drawing.Color.Transparent;
+            this.door.Image = global::WFA.Properties.Resources.Sans_titre;
+            this.door.Location = new System.Drawing.Point(12, 0);
             this.door.Name = "door";
-            this.door.Size = new System.Drawing.Size(41, 65);
+            this.door.Size = new System.Drawing.Size(45, 61);
+            this.door.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.door.TabIndex = 69;
             this.door.TabStop = false;
             this.door.Tag = "door";
