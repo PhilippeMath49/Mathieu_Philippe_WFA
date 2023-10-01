@@ -6,7 +6,7 @@ le jeu road to heaven a été réalisé dans un cadre scolaire afin de prendre en ma
 
 ## Organisation 
 
-20/09/2023
+20/09/2023 :
 -création projet 
 -mise en place du git 
 
@@ -29,7 +29,7 @@ le jeu road to heaven a été réalisé dans un cadre scolaire afin de prendre en ma
 -ajout des assets 
 
 27/09 :
-- musique 
+-musique 
 -commentaires du code 
 
 28/09 :
