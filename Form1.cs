@@ -15,7 +15,7 @@ namespace WFA
     public partial class Form1 : Form
     {
         //déclaration des booléens pour le joueur
-        bool goLeft, goRight, jumping, isGameOver,isLevel2;
+        bool goLeft, goRight, jumping, isGameOver;
 
         //déclaration variables joueur
         int jumpSpeed;
@@ -136,16 +136,7 @@ namespace WFA
                 {
                     gameTimer.Stop();
                     isGameOver = true;
-                    //Lance le niveau 2
-                    niveau2 level2 = new niveau2();
-                    if(isLevel2 == false)
-                    {
-                        level2.Show();
-                        this.Hide();
-                        isLevel2 = true;
-                        
-                    }
-                    
+                    txtScore.Text = "Score: " + score + Environment.NewLine + "Vers niveau 2";
                 }
                 else
                 {
